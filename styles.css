@@ -140,7 +140,7 @@ body {
 
     width: 100%;
     padding: 70px 0;
-    background: #0000;
+    background: #fff; /* antes #f5f5f5 */
     gap: 20px;
 }
 
@@ -306,7 +306,7 @@ body {
     display: flex;
     gap: 120px;
     align-items: flex-start;
-    background: #f5f5f5;
+    background: #fff; /* antes #f5f5f5 */
 }
 
 .columna-formulario {
@@ -554,7 +554,7 @@ body {
 .seccion-mapa-grande {
     width: 100%;
     padding: 60px 0 30px;
-    background: #f5f5f5;
+    background: #fff; /* antes #f5f5f5 */
     display: flex;
     justify-content: center;
 }
@@ -645,7 +645,7 @@ body {
 
 .contenedor-volver {
     width: 100%;
-    background: #f5f5f5;
+    background: #fff; /* antes #f5f5f5 */
     padding: 20px 80px;
 }
 
@@ -759,18 +759,19 @@ body {
 }
 
 body {
-    background: #f5f5f5;
+    background: #fff; /* antes #f5f5f5 */
     color: #111;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* ------------------ BARRA SUPERIOR ------------------ */
+/* ------------------ BARRA SUPERIOR (COMUNICACIÓN Y GENERAL) ------------------ */
 
 .barra-superior {
     display: flex;
     align-items: center;
+    justify-content: space-between;  /* 🔹 IMPORTANTE: reparte logo / menú / botón */
     gap: 16px;
     padding: 12px 80px;
     border-bottom: 1px solid #e5e5e5;
@@ -919,12 +920,12 @@ body {
     color: #666;
 }
 
-/* ------------------ RESPONSIVE ------------------ */
+/* ------------------ RESPONSIVE COMUNICACIÓN ------------------ */
 
 @media (max-width: 900px) {
     .barra-superior {
         padding: 10px 16px;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;          /* 🔹 que no salte de línea */
     }
 
     .pagina-comunicacion {
@@ -943,6 +944,22 @@ body {
 
     .titulo-hero {
         font-size: 20px;
+    }
+
+    /* Ordenar elementos en la barra para que la hamburguesa vaya a la derecha */
+    .contenedor-logo {
+        order: 1;
+    }
+
+    .boton-descargar {
+        order: 2;
+        margin-left: auto;   /* empuja hacia la derecha */
+    }
+
+    .menu-toggle {
+        display: block;
+        order: 3;            /* último elemento: totalmente a la derecha */
+        margin-left: 8px;
     }
 }
 
@@ -968,6 +985,38 @@ body {
     box-shadow: 0 10px 26px rgba(255, 152, 0, 0.20);
 }
 
+/* ---------- FILTROS DE CATEGORÍA ---------- */
 
+.filtros-categorias {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 24px 18px;
+    flex-wrap: wrap;
+}
 
+.filtros-label {
+    font-size: 14px;
+    color: #555;
+    margin-right: 4px;
+}
 
+.btn-filtro-categoria {
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid #d3d3d3;
+    background: #ffffff;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-filtro-categoria:hover {
+    border-color: #00a651;
+}
+
+.btn-filtro-categoria.activo {
+    background: #00a651;
+    border-color: #00a651;
+    color: #ffffff;
+}
