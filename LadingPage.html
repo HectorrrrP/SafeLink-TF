@@ -197,14 +197,26 @@
             Registra a tus seres queridos y verifica su estado en emergencia
         </p>
 
-        <form class="formulario-familia">
-            <label for="nombre-familia">Nombre</label>
-            <input id="nombre-familia" type="text" placeholder="Ingrese un nombre">
+        <!-- 🔽 FORMULARIO ACTUALIZADO (NOMBRE, APELLIDO, DNI, CORREO, TELÉFONO) -->
+        <form class="formulario-familia" id="form-familia">
+            <label for="nombre-familia">Nombres</label>
+            <input id="nombre-familia" type="text" placeholder="Nombres" required>
+
+            <label for="apellido-familia">Apellidos</label>
+            <input id="apellido-familia" type="text" placeholder="Apellidos" required>
+
+            <label for="dni-familia">DNI</label>
+            <input id="dni-familia" type="text" placeholder="Número de DNI" maxlength="8" required>
+
+            <label for="correo-familia">Correo electrónico</label>
+            <input id="correo-familia" type="email" placeholder="correo@ejemplo.com" required>
 
             <label for="telefono-familia">Teléfono</label>
-            <input id="telefono-familia" type="text" placeholder="Número de contacto">
+            <input id="telefono-familia" type="tel" placeholder="Número de contacto" required>
 
-            <button type="button" class="boton-registrar-familia">Registrar Familia</button>
+            <button type="button" class="boton-registrar-familia" id="btn-registrar-familia">
+                Registrar Familia
+            </button>
 
             <p class="nota-registro">
                 La información será visible solo para ti y tu familia
@@ -212,7 +224,7 @@
         </form>
     </div>
 
-    <div class="columna-lista">
+    <div class="columna-lista" id="columna-lista-familia">
         <div class="miembro-familia">
             <div class="grupo-izquierdo">
                 <div class="avatar-familia">👨‍👩‍👧‍👦</div>
