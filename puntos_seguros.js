@@ -107,3 +107,27 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+// Filtros de categoría
+const botonesFiltro = document.querySelectorAll('.btn-filtro-categoria');
+const puntosRegistrados = document.querySelectorAll('#lista-puntos-seguros .miembro-familia');
+
+botonesFiltro.forEach(boton => {
+    boton.addEventListener('click', () => {
+        const categoria = boton.getAttribute('data-categoria');
+
+        // activar visualmente el botón
+        botonesFiltro.forEach(b => b.classList.remove('activo'));
+        boton.classList.add('activo');
+
+        // mostrar / ocultar puntos según categoría
+        puntosRegistrados.forEach(punto => {
+            const catPunto = punto.getAttribute('data-categoria') || 'seguro';
+
+            if (categoria === 'todos' || categoria === catPunto) {
+                punto.style.display = 'flex';
+            } else {
+                punto.style.display = 'none';
+            }
+        });
+    });
+});
