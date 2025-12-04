@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar sesión - SafeLink</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="barra-superior">
+    <div class="contenedor-logo">
+        <!-- Logo SafeLink -->
+        <img src="img/logo-safelink.png" alt="Logo SafeLink" class="logo-safelink">
+
+        <!-- 🔔 Campana de notificaciones al costado del logo -->
+        <div class="notificaciones">
+            <button class="btn-notificaciones" id="btn-notificaciones" aria-label="Ver notificaciones">
+                <img src="img/icono-campana.png" alt="Notificaciones" class="icono-campana">
+                <span class="badge-notificaciones" id="badge-notificaciones">0</span>
+            </button>
+
+            <div class="panel-notificaciones" id="panel-notificaciones">
+                <p class="titulo-notificaciones">Alertas recientes</p>
+                <ul class="lista-notificaciones" id="lista-notificaciones">
+                    <!-- Se llena desde notificaciones.js -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAV: botón hamburguesa + menú horizontal -->
+    <nav class="menu-nav">
+        <!-- Botón hamburguesa (móvil) -->
+        <button class="menu-toggle" aria-label="Abrir menú">
+            &#9776;
+        </button>
+
+        <!-- Menú -->
+        <div class="menu Menu-Horizontal">
+            <a href="LandingPage.html#inicio">Inicio</a>
+            <a href="LandingPage.html#mapa">Mapa</a>
+            <a href="LandingPage.html#kit">Kit de Emergencia</a>
+            <a href="LandingPage.html#registro">Registro de Familia</a>
+        </div>
+    </nav>
+
+    <!-- Botón verde: volver al inicio -->
+    <a href="LadingPage.html#inicio" class="boton-descargar">Volver al Inicio</a>
+</header>
+
+<main class="pagina-comunicacion">
+    <section class="hero-comunicacion">
+
+        <!-- Columna izquierda: formulario de login -->
+        <div class="columna-texto">
+            <h2 class="titulo-hero">Iniciar sesión en SafeLink</h2>
+            <p class="descripcion-hero">
+                Accede a tu panel para coordinar con tu familia, registrar puntos seguros
+                y revisar el estado de tus seres queridos durante una emergencia.
+            </p>
+
+            <form class="formulario-familia" id="form-login">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" placeholder="nombre@ejemplo.com">
+
+                <label for="contrasena">Contraseña</label>
+                <input type="password" id="contrasena" placeholder="Ingresa tu contraseña">
+
+                <label for="rol">Rol</label>
+                <select id="rol">
+                    <option value="">Selecciona tu rol</option>
+                    <option value="residente">Familiar / Residente</option>
+                    <option value="autoridad">Autoridad local</option>
+                    <option value="voluntario">Voluntario</option>
+                </select>
+
+                <!-- Botón verde reutilizado -->
+                <button type="submit" class="boton-registrar-familia">
+                    Iniciar sesión
+                </button>
+
+                <p class="nota-registro">
+                    Esta es una versión de demostración. El inicio de sesión simula la validación de credenciales.
+                </p>
+            </form>
+
+            <!-- 🔐 Bloque de inicio de sesión biométrico (simulado) -->
+            <div class="bloque-bio">
+                <div class="bio-icono">
+                    <!-- Puedes usar una imagen de rostro/huella si quieres -->
+                    <span>🔒</span>
+                </div>
+                <div class="bio-textos">
+                    <h3 class="bio-titulo">Inicio de sesión biométrico</h3>
+                    <p class="bio-descripcion">
+                        Usa reconocimiento facial o huella dactilar para acceder más rápido a SafeLink.
+                        En esta demo se simula el proceso de verificación.
+                    </p>
+                    <button type="button" class="btn-bio" id="btn-bio">
+                        Iniciar sesión con biometría
+                    </button>
+                    <p class="bio-nota">
+                        Demo: se muestra una validación biométrica simulada.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Columna derecha: imagen -->
+        <div class="columna-imagen">
+            <img src="img/ilustracion-familia.png"
+                 alt="Familia preparada ante una emergencia"
+                 class="imagen-comunidad">
+        </div>
+
+    </section>
+</main>
+
+<footer class="pie">
+    <div class="texto-pie">
+        <span>Contacto: info@safelink.com</span>
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Términos y Condiciones</a>
+    </div>
+
+    <div class="redes">
+        <a href="#"><img src="img/icono-facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="img/icono-x.png" alt="X"></a>
+        <a href="#"><img src="img/icono-instagram.png" alt="Instagram"></a>
+    </div>
+</footer>
+
+<!-- JS -->
+<script src="menu_toggle.js"></script>
+<script src="registro_familia.js"></script>
+<script src="notificaciones.js"></script>
+<script src="login.js"></script>
+</body>
+</html>
