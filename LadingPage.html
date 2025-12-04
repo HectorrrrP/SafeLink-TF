@@ -8,31 +8,48 @@
 </head>
 <body>
 
-<header class="barra-superior">
-    <div class="contenedor-logo">
-        <!-- IMAGEN: LOGO SAFE LINK -->
-        <img src="logo-safelink.png" alt="Logo SafeLink">
-    </div>
-
-    <!-- NAV: botón hamburguesa + menú horizontal -->
-    <nav class="menu-nav">
-        <!-- BOTÓN HAMBURGUESA -->
-        <button class="menu-toggle" aria-label="Abrir menú">
-            &#9776;
-            <!-- Ícono de hamburguesa -->
-        </button>
-
-        <!-- MENÚ HORIZONTAL -->
-        <div class="menu Menu-Horizontal">
-            <a href="#inicio">Inicio</a>
-            <a href="#mapa">Mapa</a>
-            <a href="#kit">Kit de Emergencia</a>
-            <a href="#registro">Registro de Familia</a>
+    <header class="barra-superior">
+        <div class="contenedor-logo">
+            <!-- IMAGEN: LOGO SAFE LINK -->
+            <img src="img/logo-safelink.png" alt="Logo SafeLink" class="logo-safelink">
+    
+            <!-- 🔔 CAMPANA DE NOTIFICACIONES AL COSTADO DEL LOGO -->
+            <div class="notificaciones">
+                <button class="btn-notificaciones" id="btn-notificaciones" aria-label="Ver notificaciones">
+                    <!-- Aquí va la imagen de la campana -->
+                    <img src="img/icono-campana.png" alt="Notificaciones" class="icono-campana">
+                    <span class="badge-notificaciones" id="badge-notificaciones">0</span>
+                </button>
+    
+                <div class="panel-notificaciones" id="panel-notificaciones">
+                    <p class="titulo-notificaciones">Alertas recientes</p>
+                    <ul class="lista-notificaciones" id="lista-notificaciones">
+                        <!-- Se llenan desde JS o puedes poner li estáticos -->
+                    </ul>
+                </div>
+            </div>
         </div>
-    </nav>
-
-    <a href="#" class="boton-descargar">Descargar</a>
-</header>
+    
+        <!-- NAV: botón hamburguesa + menú horizontal -->
+        <nav class="menu-nav">
+            <!-- BOTÓN HAMBURGUESA -->
+            <button class="menu-toggle" aria-label="Abrir menú">
+                &#9776;
+                <!-- Ícono de hamburguesa -->
+            </button>
+    
+            <!-- MENÚ HORIZONTAL -->
+            <div class="menu Menu-Horizontal">
+                <a href="#inicio">Inicio</a>
+                <a href="#mapa">Mapa</a>
+                <a href="#kit">Kit de Emergencia</a>
+                <a href="#registro">Registro de Familia</a>
+            </div>
+        </nav>
+    
+        <a href="#" class="boton-descargar">Descargar</a>
+    </header>
+    
 
 <main class="principal" id="inicio">
     <section class="texto-principal">
@@ -46,7 +63,7 @@
         <div class="caracteristicas">
             <div class="caracteristica">
                 <!-- IMAGEN: ÍCONO DE NOTIFICACIÓN -->
-                <img src="icono-notificacion.png" alt="Notificación">
+                <img src="img/icono-notificacion.png" alt="Notificación">
                 <p>
                     Notifica cuando tus<br>
                     familiares estén bien o<br>
@@ -57,7 +74,7 @@
 
             <div class="caracteristica">
                 <!-- IMAGEN: ÍCONO KIT -->
-                <img src="icono-kit.png" alt="Kit de emergencia">
+                <img src="img/icono-kit.png" alt="Kit de emergencia">
                 <p>
                     Revisa el contenido de<br>
                     un kit recomendado para<br>
@@ -67,7 +84,7 @@
 
             <div class="caracteristica">
                 <!-- IMAGEN: ÍCONO MAPA -->
-                <img src="icono-mapa.png" alt="Mapa de seguridad">
+                <img src="img/icono-mapa.png" alt="Mapa de seguridad">
                 <p>
                     Consulta zonas de<br>
                     seguridad y sigue rutas<br>
@@ -80,14 +97,14 @@
 
     <section class="imagen-principal">
         <!-- IMAGEN: ILUSTRACIÓN PRINCIPAL -->
-        <img src="ilustracion-familia.png" alt="Personas usando SafeLink">
+        <img src="img/ilustracion-familia.png" alt="Personas usando SafeLink">
     </section>
 </main>
 
 <section class="seccion-mapa" id="mapa">
     <div class="contenedor-mapa">
         <!-- IMAGEN: MAPA -->
-        <img src="mapa.png" alt="Mapa con puntos de encuentro">
+        <img src="img/mapa.png" alt="Mapa con puntos de encuentro">
     </div>
 
     <div class="panel-rutas">
@@ -98,7 +115,7 @@
 
         <ul class="lista-puntos">
             <li>
-                <img src="icono-parque.png" alt="">
+                <img src="img/icono-parque.png" alt="">
                 <div>
                     <p class="nombre-punto">Parque central</p>
                     <span class="tipo-punto">Punto de encuentro</span>
@@ -107,7 +124,7 @@
             </li>
 
             <li>
-                <img src="icono-colegio.png" alt="">
+                <img src="img/icono-colegio.png" alt="">
                 <div>
                     <p class="nombre-punto">Colegio Nacional</p>
                     <span class="tipo-punto">Punto de encuentro</span>
@@ -116,7 +133,7 @@
             </li>
 
             <li>
-                <img src="icono-estadio.png" alt="">
+                <img src="img/icono-estadio.png" alt="">
                 <div>
                     <p class="nombre-punto">Estadio municipal</p>
                     <span class="tipo-punto">Punto de encuentro</span>
@@ -138,7 +155,7 @@
     <div class="contenedor-items-kit">
 
         <div class="item-kit">
-            <img src="kit-agua.png" alt="Agua potable">
+            <img src="img/kit-agua.png" alt="Agua potable">
             <div class="texto-item-kit">
                 <h3>Agua potable</h3>
                 <p>Al menos 3 litros por persona por día.</p>
@@ -146,7 +163,7 @@
         </div>
 
         <div class="item-kit">
-            <img src="kit-alimentos.png" alt="Alimentos no perecederos">
+            <img src="img/kit-alimentos.png" alt="Alimentos no perecederos">
             <div class="texto-item-kit">
                 <h3>Alimentos no perecederos</h3>
                 <p>Conservas, barras energéticas y más.</p>
@@ -154,7 +171,7 @@
         </div>
 
         <div class="item-kit">
-            <img src="kit-botiquin.png" alt="Botiquín básico">
+            <img src="img/kit-botiquin.png" alt="Botiquín básico">
             <div class="texto-item-kit">
                 <h3>Botiquín básico</h3>
                 <p>Curitas, analgésicos y otros suministros.</p>
@@ -162,7 +179,7 @@
         </div>
 
         <div class="item-kit">
-            <img src="kit-linterna.png" alt="Linterna y baterías">
+            <img src="img/kit-linterna.png" alt="Linterna y baterías">
             <div class="texto-item-kit">
                 <h3>Linterna y baterías</h3>
                 <p>Mantente a salvo durante la oscuridad.</p>
@@ -260,16 +277,16 @@
 
     <div class="redes">
         <!-- IMÁGENES: ICONOS DE REDES SOCIALES -->
-        <a href="#"><img src="icono-facebook.png" alt="Facebook"></a>
-        <a href="#"><img src="icono-x.png" alt="X"></a>
-        <a href="#"><img src="icono-instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="img/icono-facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="img/icono-x.png" alt="X"></a>
+        <a href="#"><img src="img/icono-instagram.png" alt="Instagram"></a>
     </div>
 </footer>
 
 <!-- JS EXTERNO DEL MENÚ -->
 <script src="menu_toggle.js"></script>
 <script src="registro_familia.js"></script>
+<script src="notificaciones.js"></script>
 
 </body>
 </html>
-
