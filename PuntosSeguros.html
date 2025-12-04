@@ -8,23 +8,41 @@
 </head>
 <body>
 
-<header class="barra-superior">
-    <div class="contenedor-logo">
-        <img src="logo-safelink.png" alt="Logo SafeLink">
-    </div>
-
-    <!-- Botón hamburguesa -->
-    <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
-
-    <nav class="menu">
-        <a href="LadingPage.html#inicio">Inicio</a>
-        <a href="LadingPage.html#mapa">Mapa</a>
-        <a href="LadingPage.html#kit">Kit de Emergencia</a>
-        <a href="LadingPage.html#registro">Registro de Familia</a>
-    </nav>
-
-    <a href="#" class="boton-descargar">Descargar</a>
-</header>
+    <header class="barra-superior">
+        <div class="contenedor-logo">
+            <img src="img/logo-safelink.png" alt="Logo SafeLink" class="logo-safelink">
+    
+            <!-- 🔔 CAMPANA DE NOTIFICACIONES AL COSTADO DEL LOGO -->
+            <div class="notificaciones">
+                <button class="btn-notificaciones" id="btn-notificaciones" aria-label="Ver notificaciones">
+                    <!-- Aquí va la imagen de la campana -->
+                    <img src="img/icono-campana.png" alt="Notificaciones" class="icono-campana">
+                    <span class="badge-notificaciones" id="badge-notificaciones">0</span>
+                </button>
+    
+                <div class="panel-notificaciones" id="panel-notificaciones">
+                    <p class="titulo-notificaciones">Alertas recientes</p>
+                    <ul class="lista-notificaciones" id="lista-notificaciones">
+                        <!-- Se llenan desde JS o puedes poner li estáticos -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Botón hamburguesa -->
+        <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+    
+        <!-- OJO: agrego Menu-Horizontal para que tu JS funcione igual -->
+        <nav class="menu Menu-Horizontal">
+            <a href="LadingPage.html#inicio">Inicio</a>
+            <a href="LadingPage.html#mapa">Mapa</a>
+            <a href="LadingPage.html#kit">Kit de Emergencia</a>
+            <a href="LadingPage.html#registro">Registro de Familia</a>
+        </nav>
+    
+        <a href="#" class="boton-descargar">Descargar</a>
+    </header>
+    
 
 <section class="seccion-mapa-grande">
     <div class="contenedor-mapa-grande">
@@ -33,7 +51,7 @@
             Identifica las mejores zonas para reunirte con tu familia en caso de emergencia.
         </p>
 
-        <!-- 🔍 Filtros de categoría -->
+        <!-- 🔍 Filtros de categoría + botón descargar mapa -->
         <div class="filtros-categorias">
             <span class="filtros-label">Filtrar por:</span>
             <button type="button" class="btn-filtro-categoria activo" data-categoria="todos">
@@ -48,10 +66,15 @@
             <button type="button" class="btn-filtro-categoria" data-categoria="hospital">
                 Hospitales
             </button>
+
+            <!-- 👉 Nuevo botón a la derecha -->
+            <a href="img/mapa.png" download class="btn-descargar-mapa">
+                Descargar mapa
+            </a>
         </div>
 
         <!-- 📌 IMAGEN DEL MAPA GRANDE -->
-        <img src="mapa.png" alt="Mapa grande de puntos seguros">
+        <img src="img/mapa.png" alt="Mapa grande de puntos seguros">
 
         <!-- 🔘 ESTADO DEL USUARIO -->
         <div class="estado-contenedor">
@@ -140,8 +163,9 @@
 </footer>
 
 <script src="menu_toggle.js"></script>
+<script src="registro_familia.js"></script>
+<script src="notificaciones.js"></script>
 <script src="puntos_seguros.js"></script>
 
 </body>
 </html>
-
