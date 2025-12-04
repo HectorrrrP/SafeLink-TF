@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    background: #fff;
+    background: #000000;
     color: #111;
     min-height: 100vh;
     display: flex;
@@ -25,7 +25,7 @@ body {
     justify-content: space-between;
     padding: 15px 80px;
     border-bottom: 1px solid #eee;
-    background: #000000;
+    background: #fff;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -967,4 +967,5 @@ body {
     border-color: #ff9800;
     box-shadow: 0 10px 26px rgba(255, 152, 0, 0.20);
 }
+
 
