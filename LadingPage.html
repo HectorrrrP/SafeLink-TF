@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SafeLink</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="barra-superior">
+    <div class="contenedor-logo">
+        <!-- IMAGEN: LOGO SAFE LINK -->
+        <img src="img/logo-safelink.png" alt="Logo SafeLink">
+    </div>
+
+    <!-- NAV: botón hamburguesa + menú horizontal -->
+    <nav class="menu-nav">
+        <!-- BOTÓN HAMBURGUESA -->
+        <button class="menu-toggle" aria-label="Abrir menú">
+            &#9776;
+            <!-- Ícono de hamburguesa -->
+        </button>
+
+        <!-- MENÚ HORIZONTAL -->
+        <div class="menu Menu-Horizontal">
+            <a href="#inicio">Inicio</a>
+            <a href="#mapa">Mapa</a>
+            <a href="#kit">Kit de Emergencia</a>
+            <a href="#registro">Registro de Familia</a>
+        </div>
+    </nav>
+
+    <a href="#" class="boton-descargar">Descargar</a>
+</header>
+
+<main class="principal" id="inicio">
+    <section class="texto-principal">
+        <h1>Prepárate antes,<br>coordina durante</h1>
+
+        <p class="descripcion">
+            SafeLink está orientado a la preparación y coordinación ante desastres naturales,
+            ayudando a los ciudadanos a organizarse y reducir riesgos.
+        </p>
+
+        <div class="caracteristicas">
+            <div class="caracteristica">
+                <!-- IMAGEN: ÍCONO DE NOTIFICACIÓN -->
+                <img src="img/icono-notificacion.png" alt="Notificación">
+                <p>
+                    Notifica cuando tus<br>
+                    familiares estén bien o<br>
+                    ensaya casos de<br>
+                    emergencia.
+                </p>
+            </div>
+
+            <div class="caracteristica">
+                <!-- IMAGEN: ÍCONO KIT -->
+                <img src="img/icono-kit.png" alt="Kit de emergencia">
+                <p>
+                    Revisa el contenido de<br>
+                    un kit recomendado para<br>
+                    estar preparado.
+                </p>
+            </div>
+
+            <div class="caracteristica">
+                <!-- IMAGEN: ÍCONO MAPA -->
+                <img src="img/icono-mapa.png" alt="Mapa de seguridad">
+                <p>
+                    Consulta zonas de<br>
+                    seguridad y sigue rutas<br>
+                    sugeridas para llegar a<br>
+                    los puntos de encuentro.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="imagen-principal">
+        <!-- IMAGEN: ILUSTRACIÓN PRINCIPAL -->
+        <img src="img/ilustracion-familia.png" alt="Personas usando SafeLink">
+    </section>
+</main>
+
+<section class="seccion-mapa" id="mapa">
+    <div class="contenedor-mapa">
+        <!-- IMAGEN: MAPA -->
+        <img src="img/mapa.png" alt="Mapa con puntos de encuentro">
+    </div>
+
+    <div class="panel-rutas">
+        <h3 class="titulo-panel">
+            Descubre las zonas seguras y<br>
+            puntos de encuentro en tu área.
+        </h3>
+
+        <ul class="lista-puntos">
+            <li>
+                <img src="img/icono-parque.png" alt="">
+                <div>
+                    <p class="nombre-punto">Parque central</p>
+                    <span class="tipo-punto">Punto de encuentro</span>
+                </div>
+                <span class="distancia">300 m</span>
+            </li>
+
+            <li>
+                <img src="img/icono-colegio.png" alt="">
+                <div>
+                    <p class="nombre-punto">Colegio Nacional</p>
+                    <span class="tipo-punto">Punto de encuentro</span>
+                </div>
+                <span class="distancia">500 m</span>
+            </li>
+
+            <li>
+                <img src="img/icono-estadio.png" alt="">
+                <div>
+                    <p class="nombre-punto">Estadio municipal</p>
+                    <span class="tipo-punto">Punto de encuentro</span>
+                </div>
+                <span class="distancia">600 m</span>
+            </li>
+        </ul>
+
+        <a href="PuntosSeguros.html" class="boton-ruta">Ver ruta</a>
+    </div>
+</section>
+
+<section class="seccion-kit" id="kit">
+    <h2 class="titulo-kit">Kit de Emergencia<br>Recomendado</h2>
+    <p class="descripcion-kit">
+        Asegúrate de tener lo necesario antes de cualquier emergencia.
+    </p>
+
+    <div class="contenedor-items-kit">
+
+        <div class="item-kit">
+            <img src="img/kit-agua.png" alt="Agua potable">
+            <div class="texto-item-kit">
+                <h3>Agua potable</h3>
+                <p>Al menos 3 litros por persona por día.</p>
+            </div>
+        </div>
+
+        <div class="item-kit">
+            <img src="img/kit-alimentos.png" alt="Alimentos no perecederos">
+            <div class="texto-item-kit">
+                <h3>Alimentos no perecederos</h3>
+                <p>Conservas, barras energéticas y más.</p>
+            </div>
+        </div>
+
+        <div class="item-kit">
+            <img src="img/kit-botiquin.png" alt="Botiquín básico">
+            <div class="texto-item-kit">
+                <h3>Botiquín básico</h3>
+                <p>Curitas, analgésicos y otros suministros.</p>
+            </div>
+        </div>
+
+        <div class="item-kit">
+            <img src="img/kit-linterna.png" alt="Linterna y baterías">
+            <div class="texto-item-kit">
+                <h3>Linterna y baterías</h3>
+                <p>Mantente a salvo durante la oscuridad.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="seccion-registro" id="registro">
+    <div class="columna-formulario">
+        <h2 class="titulo-registro">Registrar Familia Segura</h2>
+        <p class="texto-registro">
+            Registra a tus seres queridos y verifica su estado en emergencia
+        </p>
+
+        <form class="formulario-familia">
+            <label for="nombre-familia">Nombre</label>
+            <input id="nombre-familia" type="text" placeholder="Ingrese un nombre">
+
+            <label for="telefono-familia">Teléfono</label>
+            <input id="telefono-familia" type="text" placeholder="Número de contacto">
+
+            <button type="button" class="boton-registrar-familia">Registrar Familia</button>
+
+            <p class="nota-registro">
+                La información será visible solo para ti y tu familia
+            </p>
+        </form>
+    </div>
+
+    <div class="columna-lista">
+        <div class="miembro-familia">
+            <div class="grupo-izquierdo">
+                <div class="avatar-familia">👨‍👩‍👧‍👦</div>
+                <div>
+                    <p class="nombre-miembro">Pareja</p>
+                    <p class="estado-miembro">Estado: Aún no registrado</p>
+                </div>
+            </div>
+            <p class="texto-derecha alerta">NECESITA CONTACTAR</p>
+        </div>
+
+        <div class="separador-miembro"></div>
+
+        <div class="miembro-familia">
+            <div class="grupo-izquierdo">
+                <div class="avatar-familia">👨‍👩‍👧‍👦</div>
+                <div>
+                    <p class="nombre-miembro">Hijo</p>
+                    <p class="estado-miembro">Estado: Seguro</p>
+                </div>
+            </div>
+            <p class="texto-derecha">
+                Ubicación: Colegio Nacional -<br>Punto de encuentro
+            </p>
+        </div>
+
+        <div class="separador-miembro"></div>
+
+        <div class="miembro-familia">
+            <div class="grupo-izquierdo">
+                <div class="avatar-familia">👨‍👩‍👧‍👦</div>
+                <div>
+                    <p class="nombre-miembro">Padre</p>
+                    <p class="estado-miembro">Estado: Aún no registrado</p>
+                </div>
+            </div>
+            <p class="texto-derecha alerta">NECESITA CONTACTAR</p>
+        </div>
+
+        <div class="separador-miembro"></div>
+
+        <div class="miembro-familia">
+            <div class="grupo-izquierdo">
+                <div class="avatar-familia">👨‍👩‍👧‍👦</div>
+                <div>
+                    <p class="nombre-miembro">Madre</p>
+                    <p class="estado-miembro">Estado: Seguro</p>
+                </div>
+            </div>
+            <p class="texto-derecha">
+                Ubicación: Parque Central -<br>Punto de encuentro
+            </p>
+        </div>
+    </div>
+</section>
+
+<footer class="pie">
+    <div class="texto-pie">
+        <span>Contacto: info@safelink.com</span>
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Términos y Condiciones</a>
+    </div>
+
+    <div class="redes">
+        <!-- IMÁGENES: ICONOS DE REDES SOCIALES -->
+        <a href="#"><img src="img/icono-facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="img/icono-x.png" alt="X"></a>
+        <a href="#"><img src="img/icono-instagram.png" alt="Instagram"></a>
+    </div>
+</footer>
+
+<!-- JS EXTERNO DEL MENÚ -->
+<script src="menu_toggle.js"></script>
+<script src="registro_familia.js"></script>
+
+</body>
+</html>

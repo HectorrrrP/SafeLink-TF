@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puntos Seguros - SafeLink</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="barra-superior">
+    <div class="contenedor-logo">
+        <img src="img/logo-safelink.png" alt="Logo SafeLink">
+    </div>
+
+    <!-- Botón hamburguesa -->
+    <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+
+    <nav class="menu">
+        <a href="LadingPage.html#inicio">Inicio</a>
+        <a href="LadingPage.html#mapa">Mapa</a>
+        <a href="LadingPage.html#kit">Kit de Emergencia</a>
+        <a href="LadingPage.html#registro">Registro de Familia</a>
+    </nav>
+
+    <a href="#" class="boton-descargar">Descargar</a>
+</header>
+
+<section class="seccion-mapa-grande">
+    <div class="contenedor-mapa-grande">
+        <h2 class="titulo-mapa-grande">Mapa de Puntos Seguros</h2>
+        <p class="texto-mapa-grande">
+            Identifica las mejores zonas para reunirte con tu familia en caso de emergencia.
+        </p>
+
+        <!-- 📌 IMAGEN DEL MAPA GRANDE -->
+        <img src="img/mapa.png" alt="Mapa grande de puntos seguros">
+
+        <!-- 🔘 ESTADO DEL USUARIO -->
+        <div class="estado-contenedor">
+            <p class="estado-titulo">Indica tu estado actual:</p>
+
+            <div class="estado-botones">
+                <button type="button" id="btn-estado-seguro" class="btn-estado seguro">
+                    Estoy seguro
+                </button>
+
+                <a href="ComunicacionEmergencias.html" id="btn-estado-riesgo" class="btn-estado riesgo">
+                    Estoy en riesgo
+                </a>
+            </div>
+
+            <p id="mensaje-estado" class="mensaje-estado">
+                Tu estado aún no ha sido actualizado.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="seccion-registro" id="registro-punto-seguro">
+    <div class="columna-formulario">
+        <h2 class="titulo-registro">Registrar Punto Seguro</h2>
+        <p class="texto-registro">
+            Agrega un nuevo punto seguro en tu zona para mantener a tu familia protegida.
+        </p>
+
+        <form class="formulario-familia">
+            <label for="tipo-punto">Tipo de lugar</label>
+            <select id="tipo-punto">
+                <option value="">Seleccionar tipo</option>
+                <option value="🏞️">Parque</option>
+                <option value="🏫">Colegio</option>
+                <option value="🏛️">Municipalidad</option>
+                <option value="🏟️">Estadio</option>
+                <option value="🏬">Centro Comercial</option>
+            </select>
+
+            <label for="nombre-punto">Nombre del lugar</label>
+            <input type="text" id="nombre-punto" placeholder="Ej. Parque Central">
+
+            <button type="button" class="boton-registrar-familia" id="btn-registrar-punto">
+                Registrar Punto Seguro
+            </button>
+
+            <p class="nota-registro">
+                Estos puntos serán visibles para tu familia.
+            </p>
+        </form>
+    </div>
+
+    <!-- 📌 Listado dinámico -->
+    <div class="columna-lista" id="lista-puntos-seguros">
+        <h3 style="font-size:18px; margin-bottom:10px;">Mis puntos seguros registrados:</h3>
+        <p style="font-size:14px; color:#777;">Aún no has agregado ningún punto.</p>
+    </div>
+</section>
+
+<!-- 🔙 VOLVER -->
+<div class="contenedor-volver">
+    <a href="LadingPage.html#mapa" class="btn-volver">⟵ Volver</a>
+</div>
+
+<footer class="pie">
+    <div class="texto-pie">
+        <span>Contacto: info@safelink.com</span>
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Términos y Condiciones</a>
+    </div>
+
+    <div class="redes">
+        <a href="#"><img src="img/icono-facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="img/icono-x.png" alt="X"></a>
+        <a href="#"><img src="img/icono-instagram.png" alt="Instagram"></a>
+    </div>
+</footer>
+
+<script src="menu_toggle.js"></script>
+<script src="puntos_seguros.js"></script>
+
+</body>
+</html>

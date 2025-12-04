@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunicación en Emergencias - SafeLink</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="barra-superior">
+    <div class="contenedor-logo">
+        <img src="img/logo-safelink.png" alt="Logo SafeLink">
+    </div>
+    <h1 class="titulo-header">Centro de Comunicación en Emergencias</h1>
+</header>
+
+<main class="pagina-comunicacion">
+
+    <section class="hero-comunicacion">
+
+        <!-- Columna izquierda: texto + opciones -->
+        <div class="columna-texto">
+            <h2 class="titulo-hero">Mantén informada y conectada a tu comunidad</h2>
+            <p class="descripcion-hero">
+                Usa estas funciones para enviar alertas masivas o coordinarte con tus vecinos
+                durante una emergencia.
+            </p>
+
+            <div class="opciones-grid">
+
+                <!-- Opción 1: Autoridad / líder comunitario -->
+                <article class="tarjeta-opcion" data-opcion="alertas">
+                    <h3 class="titulo-opcion">Como autoridad o líder comunitario</h3>
+                    <p class="texto-opcion">
+                        Envía alertas masivas a los residentes para informar sobre desastres,
+                        rutas de evacuación o avisos preventivos en tu zona.
+                    </p>
+                    <button type="button" class="btn-accion">
+                        Enviar alertas masivas
+                    </button>
+                </article>
+
+                <!-- Opción 2: Residente -->
+                <article class="tarjeta-opcion" data-opcion="residentes">
+                    <h3 class="titulo-opcion">Como residente</h3>
+                    <p class="texto-opcion">
+                        Comunícate con otros vecinos durante un desastre para coordinar ayuda,
+                        compartir información y apoyar a quienes lo necesiten.
+                    </p>
+                    <button type="button" class="btn-accion">
+                        Hablar con mis vecinos
+                    </button>
+                </article>
+
+                <!-- ⭐ NUEVA Opción 3: Solicitar ayuda -->
+                <article class="tarjeta-opcion" data-opcion="ayuda">
+                    <h3 class="titulo-opcion">Necesito ayuda específica</h3>
+                    <p class="texto-opcion">
+                        Solicita apoyo urgente por falta de medicamentos, alimentos,
+                        rescate o asistencia médica inmediata.
+                    </p>
+                    <button type="button" class="btn-accion">
+                        Pedir ayuda ahora
+                    </button>
+                </article>
+
+            </div>
+
+            <p id="mensaje-seleccion" class="mensaje-seleccion">
+                Selecciona una opción para ver más detalles.
+            </p>
+        </div>
+
+        <!-- Columna derecha: imagen -->
+        <div class="columna-imagen">
+            <img src="img/ilustracion-familia.png"
+                 alt="Personas coordinando en una emergencia"
+                 class="imagen-comunidad">
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="pie">
+    <div class="texto-pie">
+        <span>Contacto: info@safelink.com</span>
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Términos y Condiciones</a>
+    </div>
+
+    <div class="redes">
+        <a href="#"><img src="img/icono-facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="img/icono-x.png" alt="X"></a>
+        <a href="#"><img src="img/icono-instagram.png" alt="Instagram"></a>
+    </div>
+</footer>
+
+<script src="comunicacion.js"></script>
+</body>
+</html>
