@@ -1020,3 +1020,140 @@ body {
     border-color: #00a651;
     color: #ffffff;
 }
+
+/* 👉 NUEVO BOTÓN DESCARGAR MAPA (alineado a la derecha) */
+.btn-descargar-mapa {
+    margin-left: auto;
+    padding: 8px 18px;
+    border-radius: 999px;
+    border: none;
+    background: #00a651;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.btn-descargar-mapa:hover {
+    background: #008d45;
+    transform: translateY(-1px);
+}
+
+/* ---------- LOGO + CAMPANA EN EL HEADER ---------- */
+
+.contenedor-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;              /* espacio entre logo y campana */
+}
+
+.logo-safelink {
+    height: 36px;
+}
+
+/* si quieres ajustar el logo en Comunicación, puedes bajar un poco ahí si hace falta */
+
+.icono-campana {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+/* Contenedor general de notificaciones */
+.notificaciones {
+    position: relative;
+}
+
+/* Botón que envuelve la campana */
+.btn-notificaciones {
+    position: relative;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Badge rojo del número de alertas */
+.badge-notificaciones {
+    position: absolute;
+    top: -4px;
+    right: -6px;
+    background: #d93025;
+    color: #fff;
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 999px;
+    min-width: 16px;
+    text-align: center;
+}
+
+/* Panel desplegable de notificaciones */
+.panel-notificaciones {
+    position: absolute;
+    top: 34px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    padding: 12px 0;
+    display: none;              /* oculto por defecto */
+    z-index: 200;
+}
+
+.panel-notificaciones.activo {
+    display: block;
+}
+
+.titulo-notificaciones {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 0 14px 8px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+
+.lista-notificaciones {
+    list-style: none;
+    max-height: 220px;
+    overflow-y: auto;
+    padding: 6px 0;
+}
+
+.lista-notificaciones li {
+    padding: 8px 14px;
+    font-size: 13px;
+    color: #444;
+    border-bottom: 1px solid #f3f3f3;
+    line-height: 1.4;
+}
+
+.lista-notificaciones li:last-child {
+    border-bottom: none;
+}
+
+.lista-notificaciones .hora-alerta {
+    display: block;
+    font-size: 11px;
+    color: #888;
+    margin-top: 2px;
+}
+
+/* Responsive: que la campana no rompa el header en mobile */
+@media (max-width: 900px) {
+    .contenedor-logo {
+        gap: 8px;
+    }
+
+    .panel-notificaciones {
+        left: auto;
+        right: 0;
+        transform: none;
+    }
+}
