@@ -1,9 +1,11 @@
 const btnHamburguesa = document.querySelector(".menu-toggle");
 
-const menuHorizontal = document.querySelector(".Menu-Horizontal");
+// intenta primero .Menu-Horizontal y si no, usa .menu
+const menuHorizontal =
+  document.querySelector(".Menu-Horizontal") ||
+  document.querySelector(".menu");
 
 if (btnHamburguesa && menuHorizontal) {
-
   btnHamburguesa.addEventListener("click", () => {
     menuHorizontal.classList.add("active");
     btnHamburguesa.classList.add("oculto");
