@@ -10,7 +10,7 @@
 
 <header class="barra-superior">
     <div class="contenedor-logo">
-        <img src="logo-safelink.png" alt="Logo SafeLink">
+        <img src="img/logo-safelink.png" alt="Logo SafeLink">
     </div>
 
     <!-- Botón hamburguesa -->
@@ -33,8 +33,25 @@
             Identifica las mejores zonas para reunirte con tu familia en caso de emergencia.
         </p>
 
+        <!-- 🔍 Filtros de categoría -->
+        <div class="filtros-categorias">
+            <span class="filtros-label">Filtrar por:</span>
+            <button type="button" class="btn-filtro-categoria activo" data-categoria="todos">
+                Todos
+            </button>
+            <button type="button" class="btn-filtro-categoria" data-categoria="seguro">
+                Zonas seguras
+            </button>
+            <button type="button" class="btn-filtro-categoria" data-categoria="riesgo">
+                Zonas de riesgo
+            </button>
+            <button type="button" class="btn-filtro-categoria" data-categoria="hospital">
+                Hospitales
+            </button>
+        </div>
+
         <!-- 📌 IMAGEN DEL MAPA GRANDE -->
-        <img src="mapa.png" alt="Mapa grande de puntos seguros">
+        <img src="img/mapa.png" alt="Mapa grande de puntos seguros">
 
         <!-- 🔘 ESTADO DEL USUARIO -->
         <div class="estado-contenedor">
@@ -78,6 +95,14 @@
             <label for="nombre-punto">Nombre del lugar</label>
             <input type="text" id="nombre-punto" placeholder="Ej. Parque Central">
 
+            <!-- 🔹 Categoría para usar con los filtros -->
+            <label for="categoria-punto">Categoría</label>
+            <select id="categoria-punto">
+                <option value="seguro">Zona segura</option>
+                <option value="riesgo">Zona de riesgo</option>
+                <option value="hospital">Hospital / Centro de salud</option>
+            </select>
+
             <button type="button" class="boton-registrar-familia" id="btn-registrar-punto">
                 Registrar Punto Seguro
             </button>
@@ -108,9 +133,9 @@
     </div>
 
     <div class="redes">
-        <a href="#"><img src="icono-facebook.png" alt="Facebook"></a>
-        <a href="#"><img src="icono-x.png" alt="X"></a>
-        <a href="#"><img src="icono-instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="img/icono-facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="img/icono-x.png" alt="X"></a>
+        <a href="#"><img src="img/icono-instagram.png" alt="Instagram"></a>
     </div>
 </footer>
 
@@ -119,4 +144,3 @@
 
 </body>
 </html>
-
