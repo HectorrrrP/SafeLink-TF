@@ -25,7 +25,7 @@ body {
     justify-content: space-between;
     padding: 15px 80px;
     border-bottom: 1px solid #eee;
-    background: #fff;
+    background: #000000;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -967,3 +967,4 @@ body {
     border-color: #ff9800;
     box-shadow: 0 10px 26px rgba(255, 152, 0, 0.20);
 }
+
